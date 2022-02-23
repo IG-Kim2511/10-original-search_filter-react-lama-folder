@@ -4,7 +4,10 @@ import "./app.css";
 import Table from "./Table";
 import axios from "axios";
 
-//////////////////////BASIC SEARCH
+
+/* 🍀version 1. BASIC SEARCH
+.filter
+*/
 
 /* 🦄🍄
 1. input, setQuery
@@ -39,16 +42,36 @@ import axios from "axios";
 //   );
 // }
 
-///////////////////////SEARCH ON A DATATABLE
 
+
+/* 🍀version 2.SEARCH ON A DATATABLE
+function밖으로 뺌
+
+filter, some, const keys
+
+*/
+/* 🦄🍄
+1.data.filter
+
+2. keys.some
+
+3. data.filter한 것+ keys.some한 것 둘다 있으면, 
+
+includes(~) 실행
+
+*/
 // function App() {
+
 //   const [query, setQuery] = useState("");
+
 //   const keys = ["first_name", "last_name", "email"];
+
 //   const search = (data) => {
 //     return data.filter((item) =>
 //       keys.some((key) => item[key].toLowerCase().includes(query))
 //     );
 //   };
+
 // return (
 //   <div className="app">
 //       <input
@@ -62,7 +85,11 @@ import axios from "axios";
 // }
 
 
-////////////////////// API SEARCH
+
+/* 🍀version 3. API SEARCH
+
+
+*/
 
 function App() {
   const [query, setQuery] = useState("");
